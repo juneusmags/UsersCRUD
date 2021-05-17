@@ -1,0 +1,17 @@
+*{
+    font-family: Balsamiq Sans;
+    margin: 15px;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container{
+    border: 2px solid black;
+    width: 500px;
+    padding: 5px;
+    
+}

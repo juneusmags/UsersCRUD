@@ -1,0 +1,30 @@
+*{
+    font-family: Balsamiq Sans;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+form{
+    margin: 25px;
+}
+input{
+    margin: 15px 0px 15px 0px;
+}
+
+.btn{
+    background-color: white;
+    width: 120px;
+    height: 30px;
+    box-shadow: 5px 5px;
+}
+
+a{
+    color: blue;
+}
+
+input{
+    width: 400px;
+    height: 20px;
+}

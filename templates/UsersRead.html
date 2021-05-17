@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cs/style3.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='topbar'>
+        <h1>User {{user[0]["id"]}}</h1>
+        <a href="/users">Home</a>
+    </div>
+        <div class="container">
+            <p>Full Name : {{user[0]["first_name"]}} {{user[0]["last_name"]}}</p>
+            <p>Email : {{user[0]["email"]}}</p>
+            <p>Created On : {{user[0]["created_at"]}}</p>
+            <p>Last Updated On : {{user[0]["updated_at"]}}</p>
+        </div>
+
+    <br>
+    <br>
+    <a href="/users/{{user[0]['id']}}/edit">Edit</a>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cs/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>All Users</h1>
+<div class="container">
+    <table>
+        
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        {% for one_user in all_users %}
+        <tr>
+            <td>{{one_user["id"]}}</td>
+            <td>{{one_user["first_name"]}} {{one_user["last_name"]}}</td>
+            <td>{{one_user["email"]}}</td>
+            <td>{{one_user["created_at"]}}</td>
+            <td><a href = "/users/{{one_user['id']}}">Show</a> | <a href = "users/{{one_user['id']}}/edit">Edit</a> | <a href = "/delete/{{one_user['id']}}">Delete</a></td>
+        </tr>
+    {%endfor%}
+    </table>
+</div>
+<a href="/users/new">Add New User</a>
+</body>
+</html>
